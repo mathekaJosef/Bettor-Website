@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  
+</style>
+<body>
+    <div class="well">
+        <form id="myForm">
+           <div class="form-group">
+               <input class="form-control" placeholder="first num" id="fnum">
+            </div>
+            
+            <div class="form-group">
+               <input class="form-control" placeholder="second num" id="snum">
+            </div>
+            
+            <div class="form-group">
+               <input class="form-control" placeholder="third num" id="tnum">
+            </div>
+            
+            <div class="form-group">
+               <input type="submit" class="btn btn-success" value="SUBMIT">
+            </div>
+        </form>
+        
+        <div class="form-group">
+            <label for="sum">Sum:</label>
+            <input class="form-control" id="sum">
+        </div>
+            
+        <div class="form-group">
+            <label for="average">Average:</label>
+            <input class="form-control" id="average">
+        </div>
+    </div>
+    
+    <br><br><br>
+    
+    <div class="well">
+        <form id="maxForm">
+           <div class="form-group">
+               <input class="form-control" placeholder="first num" id="fnom">
+            </div>
+            
+            <div class="form-group">
+               <input class="form-control" placeholder="second num" id="snom">
+            </div>
+            
+            <div class="form-group">
+               <input class="form-control" placeholder="third num" id="tnom">
+            </div>
+            
+            <div class="form-group">
+               <input type="submit" class="btn btn-primary" value="SUBMIT">
+            </div>
+        </form>
+        
+        <div class="form-group">
+            <label for="sum">Highest Num:</label>
+            <input class="form-control" id="hnum">
+        </div>
+    </div>
+    
+    <br><br><br>
+    
+    <div class="well">
+        <div id="validate_email">
+            
+        </div>
+        <div id="validate_pass">
+            
+        </div>
+        <div id="validate_success">
+            
+        </div>
+        
+        <form id="loginForm">
+           <div class="form-group">
+               <input class="form-control" placeholder="Email*" id="email">
+            </div>
+            
+            <div class="form-group">
+               <input class="form-control" placeholder="Password*" id="pass">
+            </div>
+            
+            <div class="form-group">
+               <input type="submit" class="btn btn-info" value="LOGIN">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    //sum of three digits
+   document.getElementById('myForm').addEventListener('submit', function(e){
+       e.preventDefault();
+       let fnum = parseInt(document.getElementById('fnum').value);
+       let snum = parseInt(document.getElementById('snum').value);
+       let tnum = parseInt(document.getElementById('tnum').value);
+       
+       let numArray = [fnum, snum, tnum];
+//       console.log(numArray);
+       
+       let output = numArray.reduce((acc, item) => {
+           return acc + item;
+       });
+       
+//       console.log(output);
+       
+       document.getElementById('sum').value = output;
+       
+       let numAverage = output / numArray.length;
+       
+       document.getElementById('average').value = numAverage;
+   })
+    
+    
+    //max number
+    document.getElementById('maxForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        let fnom = parseInt(document.getElementById('fnom').value);
+        let snom = parseInt(document.getElementById('snom').value);
+        let tnom = parseInt(document.getElementById('tnom').value);
+       
+        let numArray = [fnom, snom, tnom];
+        let [num1, num2, num3] = numArray.sort();
+          console.log(numArray.sort());
+        document.getElementById('hnum').value = num3;
+    })
+    
+    
+    
+    //login form validation
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
+        
+        let expression = /\b(www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i;
+        
+        let regEx = new RegExp(expression);
+        
+        if(!email.match(regEx)){
+           document.getElementById('validate_email').innerHTML = `<div class="alert alert-danger">
+              <strong>Invalid Email Address!.</strong>
+            </div>`; 
+        }else if(pass < 8){
+            document.getElementById('validate_pass').innerHTML =
+                `<div class="alert alert-danger">
+                  <strong>Atleast 8 characters required!.</strong>
+                </div>`;
+        }else{
+            document.getElementById('validate_success').innerHTML =
+                `<div class="alert alert-success">
+                  <strong>Good to go!!.</strong>
+                </div>`;
+        }
+        
+    });
+    
+    $(document).ready(function(){
+        $('#loginForm').on('submit', function(e){
+            e.preventDefault();
+            $('#validate_email, #validate_pass').fadeIn(1000).fadeOut(6000);
+        })
+    })
+    
+</script>
+
+
+
+
+
+
+

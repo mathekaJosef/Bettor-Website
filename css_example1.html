@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Cyrus</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="laptop3.jpg">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head> 
+<style type="text/css">
+	$background: #E0E0E0;
+	$secondary: salmon;
+
+	body { background: $background; font-size:170px; text-align:center; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-family: "Avenir Next", "Helvetica Neue", sans-serif}
+
+
+	@mixin shadow($color, $steps, $glow) {
+	  $all: ();
+	  $all: append($all, -1px 1px 0 rgba($color,.1), comma);
+	  $all: append($all, 1px -1px 0 rgba($glow,.1), comma);
+	  $all: append($all, 1px -1px 25px $glow, comma);
+	  @for $i from 1 through $steps {
+	    $all: append($all, append($i*-1px $i*1.9px $i*1px, rgba($color,2/$i)));
+	  }
+	  text-shadow: $all;
+	}
+
+	// Second mixin as I still have to figure out the direction parameters...
+	@mixin shadow-alternate($color, $steps, $glow) {
+	  $all: ();
+	  $all: append($all, -1px -1px 0 rgba($color,.1), comma);
+	  $all: append($all, 1px 1px 0 rgba($glow,.1), comma);
+	  $all: append($all, 1px -1px 25px $glow, comma);
+	  @for $i from 1 through $steps {
+	    $all: append($all, append($i*-1px $i*-1.9px $i*1px, rgba($color,2/$i)));
+	  }
+	  text-shadow: $all;
+	}
+
+	.font, .font span {transition: 2s;}
+
+	.font {
+	  cursor: pointer;
+	  -webkit-transform:translate3d(0,50%,0) rotate(0deg);
+	  color: $background;
+	  @include shadow( darken($background,25%), 25, white );
+	  span {
+	    color: $secondary;
+	    @include shadow( darken(desaturate($secondary, 80%),20%), 25, lighten($secondary,10%) )
+	      }
+	  &:hover {
+	    -webkit-transform:translate3d(0,100%,0) rotate(-90deg);
+	    @include shadow-alternate( darken($background,20%), 25, white );
+	    span {
+	    color: $secondary;
+	    @include shadow-alternate( darken(desaturate($secondary, 80%),20%), 25, lighten($secondary,10%) )
+	      }
+	  }
+	}
+</style>  
+<body>
+	<div class="font">codepen<span>.</span>io</div>
+</body>
+</html>

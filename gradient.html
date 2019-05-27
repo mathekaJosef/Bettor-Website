@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	
+
+body {
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  
+  height:  100vh;
+  padding: 20px;
+  
+  background: linear-gradient(35deg, var(--grad-start), var(--grad-end))
+}
+
+p {
+  position:       relative;
+  padding:        5px 10px;
+  border:         1px solid currentColor;
+  border-radius:  var(--font-title);
+  font:           100 var(--font-title)/1 sans-serif;
+  text-align:     center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color:          #fff;
+  
+  &::before, &::after {
+    position:             absolute;
+    display:              block;
+    width:                100%;
+    padding:              5px;
+    font-size:            12px;
+    font-variant-numeric: tabular-nums;
+    color:                #fff;
+  }
+  
+  &::before {
+    content: attr(data-gradStart);
+    bottom:  100%; 
+  }
+  &::after {
+    content: attr(data-gradEnd);
+    top:     100%;
+  }
+}
+</style>
+<body>
+  <p>I whip my mouse back and forth</p>
+</body>
+</html>
+<script type="text/javascript">
+	// const w = window.innerWidth
+
+	// const getPercentX  = (x) => Math.round(x / w * 360)
+	// const styleEl = document.documentElement.style
+	// const setStyle = styleEl.setProperty.bind(styleEl);
+
+	// document.addEventListener('onload', (e) => {
+	//   const percentX  = getPercentX(e.clientX)
+	//   const gradStart = `hsl(${percentX}, 100%, 75%)`
+	//   const gradEnd   = `hsl(${(percentX + 120) % 360}, 100%, 50%)`
+	  
+	//   setStyle('--grad-start', gradStart)
+	//   setStyle('--grad-end', gradEnd)
+	// })
+</script>

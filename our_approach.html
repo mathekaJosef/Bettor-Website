@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cyrus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="laptop3.jpg">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="cyrus_proj.css">
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <nav id="nav1" class="navbar-fixed-top">
+        <h1 id="head">Bettor Services</h1>
+        <h1 id="head_hide">Bettor <strong id="strong">Services</strong></h1>
+        <div>
+            <i class="fa fa-bars  pull-right" id="bars"></i>
+        </div>
+        <ul class="nav navbar-nav" id="ul">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html" id="about1">About Us</a></li>
+            <li><a href="our_approach.html">Our Approach</a></li>
+            <li class="nav-item"><a href="our_services.html" class="nav-link">Our Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="dashboard">
+        <div>
+
+            <div>
+                <div>
+                    <img src="image1.jpg" id="img">
+                    <div class="carousel-caption">
+                        <div class="jumbo-abt">
+                            <p id="b_title"></p>
+                            <div id="main">
+                                <!-- <h1 id="sensual" class="shadowPlay tween-looper">BETTOR SERVICES LIMITED</h1> -->
+                                <br>
+                                <h2 id="h_supply-abt">OUR APPROACH</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abt-us">
+        <div class="jumbotron" id="abt-us">
+            <div class="narrow-abt">
+                <p id="p-link"><a href="index.html" id="a-index">HOME  </a><span class="fa fa-angle-right" id="angle-r"></span> OUR APPROACH</p>
+                <br><br>
+                <div>
+                    <p id="p_serv1-app"></p>
+                    <p id="p_serv2-app"></p>
+
+                    <p id="p-app">OUR APPROACH</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p id="li_serv-abt">.</p><p id="p_serv-abt">We understand how crucial a role our services play as a whole or as part of building and construction services provision, and that is why we insist on the most stringent code of ethics and commitment to excellence while offering our services.</p>
+                            <p id="li_serv-abt">.</p><p id="p_serv-abt">Bettor Services Ltd sees teamwork on every project as the key success ingredient and are responsible for creating this environment. The overall project manager is duty-bound in ensuring effective communication to all stakeholders and at all levels. Teams are built by combining the strengths of the individual members and refining skills to meet and exceed the Client’s expectations.</p>
+                            <p id="li_serv-abt">.</p><p id="p_serv-abt">Excellent safety standards and records.</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="image8.jpg" alt="" id="img-app">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       
+    </section>
+
+    <section class="footer" id="footer_about">
+        <div class="layer1-abt">
+            
+        </div>
+        <div class="layer2-abt">
+            
+        </div>
+        <div class="layer3-abt">
+            <div class="col-md-4">
+                <p id="p_layer3-abt">&copy;2019 | Bettor Services Company .Inc</p>
+            </div>
+            <div class="col-md-4">
+                <ul id="p_layer3-abt" class="nav-pills nav navbar-nav">
+                    <li><i class="fa fa-envelope-o"  id="fa_layer3"></i></li>
+                    <li><p id="p_num">+254789065432</p></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul id="p_layer3-abt" class="nav-pills nav navbar-nav">
+                    <li><i class="fa fa-facebook-square" id="fa_layer3"></i></li>
+                    <li><i class="fa fa-instagram" id="fa_layer3"></i></li>
+                    <li><i class="fa fa-twitter-square" id="fa_layer3"></i></li>
+                    <li><i class="fa fa-google-plus-square" id="fa_layer3"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="cyrus_proj.js"></script>
+
+<script type="text/javascript">
+    void function() {
+        var documentElem = $(document),
+            nav = $('#nav1'),
+            lastScrollTop = 0;
+
+        documentElem.on('scroll', function() {
+            var currentScrollTop = $(this).scrollTop();
+            //scroll down
+            if (currentScrollTop > lastScrollTop) {
+                $("#nav1").css({
+                    // "transition": ".5s ease-out"
+                    "opacity": "0"
+                })
+            }
+            //scroll up
+            else {
+                $("#nav1").css({
+                    // "transition": ".5s ease-in"
+                    "opacity": "1"
+                })
+            }
+
+            lastScrollTop = currentScrollTop;
+        });
+    }();
+</script>
+</script>
+</html>
+
