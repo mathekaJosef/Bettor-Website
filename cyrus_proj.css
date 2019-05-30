@@ -823,7 +823,7 @@ nav div {
     background: linear-gradient(-245deg, var(--grad-start), var(--grad-end));
     color: #fff;
     background-size: cover;
-    height: 330px;
+    height: 378px;
     width: 1400px;
     /*border-radius: 50% 0% 4% 300%;*/
     margin-top: -700px;
@@ -962,6 +962,127 @@ nav div {
     margin-bottom: -5px;
     color: #001a17;
     width: 700px;
+}
+
+/**********************************/
+/* contact us */
+/**********************************/
+#well_contact{
+    width: 1076px;
+    /* margin-left: 95px; */
+    margin-top: 8px;
+    background-color: #fff;
+    border: none;
+    box-shadow: -1px 9px 25px -20px rgba(0, 0, 0, 0.75)
+}
+.form-contact{
+    margin-top: 30px;
+    margin-left: 35px;
+}
+#col-sm-8 h4{
+    text-align: center;
+    font-size: 15px;
+    color: #001a17;
+}
+#col-sm-8 p{
+    margin-left: 57px;
+    font-size: 15px;
+    color: #00ff00;
+}
+#first_name{
+   width: 290px;
+   height: 34px;
+   font-size: 11px;
+   border-radius: 0px;
+   margin-bottom: 30px;
+}
+.form-control{
+}
+#last_name{
+   width: 290px;
+   height: 34px;
+   font-size: 11px;
+   border-radius: 0px;
+   margin-left: 330px;
+   margin-top: -70px;
+   margin-bottom: 30px;
+}
+#contact_email{
+   width: 290px;
+   height: 34px;
+   font-size: 11px;
+   border-radius: 0px;
+   margin-bottom: 30px;
+}
+#phone{
+   width: 290px;
+   height: 34px;
+   font-size: 11px;
+   border-radius: 0px;
+   margin-left: 330px;
+   margin-top: -70px;
+}
+#subject{
+   width: 290px;
+   height: 34px;
+   font-size: 11px;
+   border-radius: 0px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+}
+#contact_message{
+   font-size: 11px;
+   width: 620px;
+   margin-bottom: 30px;
+}
+#submit_contact{
+   font-size: 11px;
+   width: 620px;
+   background-color: #001a17;
+   color: #00ff00;
+   height: 40px;
+   border: none;
+   border-radius: 35px;
+   margin-top:30px;
+   margin-left: 0px;
+}
+
+#customer_care{
+    background-color: #001a16;
+    height: 365px;
+    width: 257px;
+    margin-left: 815px;
+    margin-top: -20px;
+    border-top-right-radius: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+#customer_care h5{
+    color: #00ff00;
+    text-align: center;
+    font-size: 17px;
+}
+.d_emai{
+    font-size: 11px;
+}
+#customer_p{
+    font-size: 13px;
+    color: #fff;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+#customer_care div{
+    font-size: 11px;
+    color: #fff;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+#customer_care div i{
+    color: #00ff00;
+}
+#customer_care div p{
+    font-size: 14px;
 }
 
 
